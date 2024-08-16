@@ -1,0 +1,27 @@
+body {
+    margin: 0 auto;
+    max-width: 400px;
+    font-family: 'Lato';
+    line-height: 1.5;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+button {
+    margin-top: 20px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    padding-block: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+p {
+    text-align: justify;
+}
+input {
+    margin-bottom: 12px;
+    padding: 8px;
+}
