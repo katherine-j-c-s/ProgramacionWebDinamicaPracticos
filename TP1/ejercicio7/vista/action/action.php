@@ -1,11 +1,11 @@
 <?php
 
 include_once "../../../utils/funciones.php";
-include_once "../../control/CrearTexto.php";
+include_once "../../control/Calcular.php";
 
 $datos = darDatosSubmitted();
-$obj = new CrearTexto();
-$resut = $obj->presentar($datos);
+$obj = new Calcular();
+$resut = $obj->Calculo($datos);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,8 +17,8 @@ $resut = $obj->presentar($datos);
 </head>
 <body>
     <h1>texto</h1>
-    <h2><?php echo $resut[0]; ?></h2>
+    <h2><?php echo "el calculo que hicimos fue " . $resut[0] ; ?></h2>
     <p><?php echo $resut[1]; ?></p>
-    <a href="../ejercicio5.php">Volver atras</a>
+    <a href="../ejercicio7.php">Volver atras</a>
 </body>
 </html>

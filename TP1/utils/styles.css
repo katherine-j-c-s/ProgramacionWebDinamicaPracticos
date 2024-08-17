@@ -25,3 +25,7 @@ input {
     margin-bottom: 12px;
     padding: 8px;
 }
+.checkRadio{
+    display: flex;
+    align-items: baseline;
+}

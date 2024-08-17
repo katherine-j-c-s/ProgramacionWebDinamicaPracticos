@@ -19,6 +19,6 @@ $resut = $obj->presentar($datos);
     <h1>texto</h1>
     <h2><?php echo $resut[0]; ?></h2>
     <p><?php echo $resut[1]; ?></p>
-    <a href="../ejercicio5.php">Volver atras</a>
+    <a href="../ejercicio6.php">Volver atras</a>
 </body>
 </html>

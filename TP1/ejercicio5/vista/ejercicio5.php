@@ -1,10 +1,10 @@
 <?php
-// Ejercicio 4
-// Modificar el formulario del ejercicio anterior para que usando la edad solicitada, enviar
-// esos datos a otra página en donde se muestren mensajes distintos dependiendo si la
-// persona es mayor de edad o no; (si la edad es mayor o igual a 18).
-// Enviar los datos usando el método GET y luego probar de modificar los datos
-// directamente en la url para ver los dos posibles mensajes.
+// Ejercicio 5
+// Modificar el formulario del ejercicio anterior solicitando, tal que usando componentes
+// “radios buttons” se ingrese el nivel de estudio de la persona: 1-no tiene estudios, 2-
+// estudios primarios, 3-estudios secundarios. Agregar el componente que crea más
+// apropiado para solicitar el sexo. En la página que procesa el formulario mostrar además
+// un mensaje que indique el tipo de estudios que posee y su sexo.
 
 ?>
 
@@ -16,17 +16,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ejercicio 4</h1>
+    <h1>Ejercicio 5</h1>
     <h2>Consigna</h2>
     <p>
-        Modificar el formulario del ejercicio anterior para que usando la edad solicitada, enviar
-        esos datos a otra página en donde se muestren mensajes distintos dependiendo si la
-        persona es mayor de edad o no; (si la edad es mayor o igual a 18).
-        Enviar los datos usando el método GET y luego probar de modificar los datos
-        directamente en la url para ver los dos posibles mensajes.
+        Modificar el formulario del ejercicio anterior solicitando, tal que usando componentes
+        “radios buttons” se ingrese el nivel de estudio de la persona: 1-no tiene estudios, 2-
+        estudios primarios, 3-estudios secundarios. Agregar el componente que crea más
+        apropiado para solicitar el sexo. En la página que procesa el formulario mostrar además
+        un mensaje que indique el tipo de estudios que posee y su sexo.
     </p>
     <h2>Solución</h2>
     <form action="./action/action.php" method="get">
+
         <label for="nombre">Ingrese nombre</label>
         <input required type="text" name="nombre" id="nombre" >
         <label for="apellido">Ingrese apellido</label>
@@ -35,7 +36,30 @@
         <input required type="number" name="edad" id="edad" >
         <label for="direccion">Ingrese direccion</label>
         <input required type="text" name="direccion" id="direccion" >
+        
+        <select name="sexo" id="sexo">
+            <option value="escojer">sexo</option>
+            <option value="femenino">femenino</option>
+            <option value="masculino">masculimo</option>
+        </select>
+        
+        <br>
+
+        <div class="checkRadio">
+            <input type="radio" name="ninguno" id="ninguno">
+            <label for="ninguno">no tiene estudios</label>
+        </div>
+        <div class="checkRadio">
+            <input type="radio" name="primario" id="primario">
+            <label for="primario">estudios primarios</label>
+        </div>
+        <div class="checkRadio">
+            <input type="radio" name="secundario" id="secundario">
+            <label for="secundario">estudios secundarios</label>
+        </div>
+
         <button type="submit">Enviar</button>
+
     </form>
 </body>
 </html>

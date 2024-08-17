@@ -1,11 +1,11 @@
 <?php
 
 include_once "../../../utils/funciones.php";
-include_once "../../control/CrearTexto.php";
+include_once "../../control/CalcularEntrada.php";
 
 $datos = darDatosSubmitted();
-$obj = new CrearTexto();
-$resut = $obj->presentar($datos);
+$obj = new CalcularEntrada();
+$resut = $obj->calcular($datos);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,8 +17,7 @@ $resut = $obj->presentar($datos);
 </head>
 <body>
     <h1>texto</h1>
-    <h2><?php echo $resut[0]; ?></h2>
-    <p><?php echo $resut[1]; ?></p>
-    <a href="../ejercicio5.php">Volver atras</a>
+    <p><?php echo "Su entrada esta en " . $resut . " pesos:"; ?></p>
+    <a href="../ejercicio8.php">Volver atras</a>
 </body>
 </html>
