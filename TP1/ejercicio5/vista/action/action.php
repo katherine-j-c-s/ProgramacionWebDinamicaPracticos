@@ -1,26 +1,24 @@
 <?php
 
-include_once "../../control/Numero.php";
 include_once "../../../utils/funciones.php";
+include_once "../../control/CrearTexto.php";
 
 $datos = darDatosSubmitted();
-
-$obj = new Numero();
-$mensaje = $obj->devolverSigno($datos);
-
+$obj = new CrearTexto();
+$resut = $obj->presentar($datos);
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver número</title>
+    <title>Ver resultado</title>
     <link rel="stylesheet" href="../../../utils/styles.css">
 </head>
 <body>
-    <h1>Ver número ingresado</h1>
-    <p><?php echo "El número ingresado es " . $mensaje; ?></p>
-    <a href="../ejercicio1.php">Volver atras</a>
+    <h1>texto</h1>
+    <h2><?php echo $resut[0]; ?></h2>
+    <p><?php echo $resut[1]; ?></p>
+    <a href="../ejercicio4.php">Volver atras</a>
 </body>
 </html>

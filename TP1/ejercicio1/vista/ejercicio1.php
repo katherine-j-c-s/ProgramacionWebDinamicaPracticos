@@ -21,7 +21,7 @@
     respuesta, que permita volver a la página anterior.
     </p>
     <h2>Solución</h2>
-    <form action="./action/action-ej1.php" method="post">
+    <form action="./action/action.php" method="post">
         <label for="number">Ingrese un número</label>
         <input type="number" name="number" id="number" required>
         <button type="submit">Enviar</button>
